@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Advanced Reports Dashboard</title>
+
+  <link rel="stylesheet" href="Reports.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      REPORTS
+    </div>
+
+    <nav class="menu">
+      <a href="#">🏠 Dashboard</a>
+      <a href="#" class="active">📊 Reports</a>
+      <a href="#">💹 Analytics</a>
+      <a href="#">👥 Users</a>
+      <a href="#">⚙ Settings</a>
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+      <div>
+        <h1>Reports Overview</h1>
+        <p>Advanced business reports & analytics</p>
+      </div>
+
+      <button class="download-btn">
+        Download Report
+      </button>
+
+    </div>
+
+    <!-- REPORT CARDS -->
+
+    <section class="cards">
+
+      <div class="card">
+        <h3>Total Revenue</h3>
+        <h2>$84,320</h2>
+        <span class="green">+18.2%</span>
+      </div>
+
+      <div class="card">
+        <h3>Total Expenses</h3>
+        <h2>$23,210</h2>
+        <span class="red">-4.8%</span>
+      </div>
+
+      <div class="card">
+        <h3>Active Clients</h3>
+        <h2>12,920</h2>
+        <span class="green">+12.1%</span>
+      </div>
+
+      <div class="card">
+        <h3>Conversion Rate</h3>
+        <h2>78%</h2>
+        <span class="green">+6.4%</span>
+      </div>
+
+    </section>
+
+    <!-- CHART SECTION -->
+
+    <section class="chart-grid">
+
+      <div class="chart-box large-chart">
+        <div class="title">
+          Monthly Revenue Report
+        </div>
+
+        <canvas id="barChart"></canvas>
+      </div>
+
+      <div class="chart-box">
+        <div class="title">
+          User Activity
+        </div>
+
+        <canvas id="doughnutChart"></canvas>
+      </div>
+
+    </section>
+
+    <!-- TABLE SECTION -->
+
+    <section class="table-section">
+
+      <div class="table-header">
+        <h2>Latest Reports</h2>
+
+        <input type="text" placeholder="Search reports...">
+      </div>
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Report Name</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>Revenue Analysis</td>
+            <td>30 Apr 2026</td>
+            <td><span class="status completed">Completed</span></td>
+            <td>Finance</td>
+            <td><button>View</button></td>
+          </tr>
+
+          <tr>
+            <td>User Engagement</td>
+            <td>29 Apr 2026</td>
+            <td><span class="status pending">Pending</span></td>
+            <td>Marketing</td>
+            <td><button>View</button></td>
+          </tr>
+
+          <tr>
+            <td>Sales Report</td>
+            <td>28 Apr 2026</td>
+            <td><span class="status completed">Completed</span></td>
+            <td>Sales</td>
+            <td><button>View</button></td>
+          </tr>
+
+          <tr>
+            <td>Expense Tracking</td>
+            <td>27 Apr 2026</td>
+            <td><span class="status failed">Failed</span></td>
+            <td>Accounts</td>
+            <td><button>View</button></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="Reports.js"></script>
+
+</body>
+</html>

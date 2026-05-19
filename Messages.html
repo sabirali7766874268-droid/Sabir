@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Messages</title>
+<link rel="stylesheet" href="Messages.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar Users -->
+    <div class="chat-list">
+        <h2>Messages</h2>
+
+        <input type="text" id="search" placeholder="Search user...">
+
+        <div class="user active" data-name="Sabir">
+            <img src="https://i.pravatar.cc/40?img=1">
+            <div>
+                <h4>Sabir</h4>
+                <p>Hey, how are you?</p>
+            </div>
+            <span class="badge">2</span>
+        </div>
+
+        <div class="user" data-name="Ali">
+            <img src="https://i.pravatar.cc/40?img=2">
+            <div>
+                <h4>Ali</h4>
+                <p>Project done</p>
+            </div>
+        </div>
+
+        <div class="user" data-name="Ramzan">
+            <img src="https://i.pravatar.cc/40?img=3">
+            <div>
+                <h4>Ramzan</h4>
+                <p>Check message</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-box">
+        <div class="chat-header">
+            <h3 id="chatName">Sabir</h3>
+        </div>
+
+        <div class="chat-body" id="chatBody">
+            <div class="msg received">Hello 👋</div>
+            <div class="msg sent">Hi!</div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Type message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="Messages.js"></script>
+</body>
+</html>

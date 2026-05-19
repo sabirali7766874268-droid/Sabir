@@ -1,0 +1,178 @@
+/* ================= RESET ================= */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* ================= BODY ================= */
+body{
+    min-height:100vh;
+    background: radial-gradient(circle at top,#1e1e2f,#0f111a);
+    color:white;
+    padding:30px;
+    overflow-x:hidden;
+}
+
+/* animated background glow */
+body::before{
+    content:"";
+    position:fixed;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle,rgba(59,130,246,0.15),transparent 60%);
+    animation:moveGlow 10s linear infinite;
+    z-index:-1;
+}
+
+@keyframes moveGlow{
+    0%{transform:translate(0,0);}
+    50%{transform:translate(10%,10%);}
+    100%{transform:translate(0,0);}
+}
+
+/* ================= FORM ================= */
+.form-container{
+    max-width:420px;
+    margin:auto;
+    padding:25px;
+    border-radius:16px;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(18px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+    animation:fadeUp 0.8s ease, floatBox 4s ease-in-out infinite;
+}
+
+/* form entry animation */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* floating effect */
+@keyframes floatBox{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+}
+
+/* ================= INPUT + BUTTON ================= */
+input,button{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    transition:0.3s;
+    font-size:14px;
+}
+
+/* input style */
+input{
+    background:#2a2a40;
+    color:white;
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+/* input focus animation */
+input:focus{
+    transform:scale(1.03);
+    border-color:#3b82f6;
+    box-shadow:0 0 0 3px rgba(59,130,246,0.25);
+}
+
+/* ================= BUTTON ================= */
+button{
+    background:linear-gradient(45deg,#3b82f6,#6366f1);
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    letter-spacing:0.5px;
+    box-shadow:0 10px 25px rgba(59,130,246,0.3);
+    position:relative;
+    overflow:hidden;
+}
+
+/* button hover */
+button:hover{
+    transform:translateY(-3px) scale(1.02);
+    box-shadow:0 15px 35px rgba(99,102,241,0.4);
+}
+
+/* button shine animation */
+button::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.3),transparent);
+    transition:0.5s;
+}
+
+button:hover::after{
+    left:100%;
+}
+
+/* button click */
+button:active{
+    transform:scale(0.97);
+}
+
+/* ================= TABLE ================= */
+table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0 10px;
+    margin-top:25px;
+    animation:fadeUp 1s ease;
+}
+
+/* header */
+th{
+    padding:14px;
+    background:linear-gradient(45deg,#3b82f6,#6366f1);
+    color:white;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    border-radius:6px;
+}
+
+/* table cells */
+td{
+    padding:14px;
+    background:rgba(255,255,255,0.04);
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,0.08);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+/* row hover animation */
+tr{
+    transition:0.3s;
+}
+
+tr:hover td{
+    background:rgba(59,130,246,0.15);
+    transform:scale(1.02);
+}
+
+/* ================= DELETE BUTTON ================= */
+button.delete{
+    background:linear-gradient(45deg,#ff4b5c,#ff1744);
+    box-shadow:0 10px 25px rgba(255,23,68,0.3);
+}
+
+/* delete hover */
+button.delete:hover{
+    box-shadow:0 15px 35px rgba(255,23,68,0.5);
+    transform:scale(1.05);
+}

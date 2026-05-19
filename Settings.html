@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Advanced Settings Panel</title>
+
+  <link rel="stylesheet" href="Settings.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      SETTINGS
+    </div>
+
+    <nav class="menu">
+
+      <a href="#" class="active">
+        <i class="fa-solid fa-gear"></i>
+        General
+      </a>
+
+      <a href="#">
+        <i class="fa-solid fa-user"></i>
+        Profile
+      </a>
+
+      <a href="#">
+        <i class="fa-solid fa-lock"></i>
+        Security
+      </a>
+
+      <a href="#">
+        <i class="fa-solid fa-bell"></i>
+        Notifications
+      </a>
+
+      <a href="#">
+        <i class="fa-solid fa-palette"></i>
+        Appearance
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <!-- Main -->
+
+  <main class="main-content">
+
+    <!-- Header -->
+
+    <div class="header">
+
+      <div>
+        <h1>Settings Panel</h1>
+        <p>Manage your dashboard settings and preferences</p>
+      </div>
+
+      <button class="save-btn">
+        Save Changes
+      </button>
+
+    </div>
+
+    <!-- Profile Section -->
+
+    <section class="settings-card">
+
+      <div class="section-title">
+        <i class="fa-solid fa-user"></i>
+        Profile Settings
+      </div>
+
+      <div class="form-grid">
+
+        <div class="input-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name">
+        </div>
+
+        <div class="input-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter email">
+        </div>
+
+        <div class="input-group">
+          <label>Phone Number</label>
+          <input type="text" placeholder="Enter phone">
+        </div>
+
+        <div class="input-group">
+          <label>Company</label>
+          <input type="text" placeholder="Company name">
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Security -->
+
+    <section class="settings-card">
+
+      <div class="section-title">
+        <i class="fa-solid fa-shield-halved"></i>
+        Security Settings
+      </div>
+
+      <div class="toggle-box">
+
+        <div class="toggle-item">
+          <div>
+            <h3>Two Factor Authentication</h3>
+            <p>Enable additional account security</p>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-item">
+          <div>
+            <h3>Login Alerts</h3>
+            <p>Receive alerts for suspicious activity</p>
+          </div>
+
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Appearance -->
+
+    <section class="settings-card">
+
+      <div class="section-title">
+        <i class="fa-solid fa-palette"></i>
+        Appearance
+      </div>
+
+      <div class="theme-grid">
+
+        <div class="theme-card active-theme">
+          <div class="theme-color blue"></div>
+          <span>Blue Theme</span>
+        </div>
+
+        <div class="theme-card">
+          <div class="theme-color purple"></div>
+          <span>Purple Theme</span>
+        </div>
+
+        <div class="theme-card">
+          <div class="theme-color green"></div>
+          <span>Green Theme</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Notification -->
+
+    <section class="settings-card">
+
+      <div class="section-title">
+        <i class="fa-solid fa-bell"></i>
+        Notifications
+      </div>
+
+      <div class="notification-box">
+
+        <div class="notify">
+          <input type="checkbox" checked>
+          <span>Email Notifications</span>
+        </div>
+
+        <div class="notify">
+          <input type="checkbox">
+          <span>Push Notifications</span>
+        </div>
+
+        <div class="notify">
+          <input type="checkbox" checked>
+          <span>Weekly Reports</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+<script src="Settings.js"></script>
+
+</body>
+</html>
